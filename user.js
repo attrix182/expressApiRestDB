@@ -43,6 +43,7 @@ user.listID = (req, res) => {
 
 };
 
+/*
 user.add = (req, res) => {
 
 
@@ -50,14 +51,14 @@ user.add = (req, res) => {
     const sql = 'INSERT INTO usuarios WHERE SET ?'
 
     const newUser = {
-        /*
+       
         correo: req.body.name,
         clave: req.body.clave,
         nombre: req.body.nombre,
         apellido: req.body.apellido,
         perfil: req.body.perfil,
         foto: req.body.foto
- */
+
     }
 
 
@@ -73,6 +74,6 @@ user.add = (req, res) => {
 
 };
 
-
+*/
 
 module.exports = user;

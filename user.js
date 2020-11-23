@@ -89,7 +89,7 @@ user.deleteID = (req, res) => {
 
     const {id }= req.params;
     const {nombre, correo, apellido, clave }= req.body;
-    const sql = `UPDATE usuarios SET correo = '${correo}', clave = '${clave}', nombre = '${nombre}', apellido = '${apellido}' `
+    const sql = `UPDATE usuarios SET correo = '${correo}', clave = '${clave}', nombre = '${nombre}', apellido = '${apellido}' WHERE id = '${id}'`
 
     connection.query(sql, (error, results) => {
         if (error) throw error;

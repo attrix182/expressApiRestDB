@@ -26,6 +26,7 @@ app.get('/api/users/:id', user.listID);
 app.delete('/api/users/:id', user.deleteID);
 
 
+app.put('/api/users/:id', user.modID);
 
 
 const port = process.env.PORT || 3000;

@@ -84,5 +84,24 @@ user.deleteID = (req, res) => {
 
 };
 
+ user.modID = (req, res) => {
+
+
+    const {id }= req.params;
+    const {nombre, correo, apellido, clave }= req.body;
+    const sql = `UPDATE usuarios SET correo = '${correo}', clave = '${clave}', nombre = '${nombre}', apellido = '${apellido}' `
+
+    connection.query(sql, (error, results) => {
+        if (error) throw error;
+     
+            res.send('Usuario modificado')
+        
+
+    })
+
+};
+ 
+
+
 
 module.exports = user;

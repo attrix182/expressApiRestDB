@@ -103,6 +103,26 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "api/users/ID MOD",
+			"request": {
+				"url": "http://localhost:3000/api/users/2",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"correo\" : \"abMail\", \"nombre\":\"b\", \"clave\":123, \"apellido\":\"bb\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }

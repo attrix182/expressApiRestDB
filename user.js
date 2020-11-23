@@ -6,7 +6,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'merceriabd'
+    database: 'expressdb'
 });
 
 user.list = (req, res) => {
@@ -46,31 +46,24 @@ user.listID = (req, res) => {
 
 user.add = (req, res) => {
 
-
-    const {id }= req.params;
-    const sql = 'INSERT INTO usuarios WHERE SET ?'
+    const sql = 'INSERT INTO usuarios SET ?'
 
     const newUser = {
        
-        correo: req.body.name,
+        correo: req.body.correo,
         clave: req.body.clave,
         nombre: req.body.nombre,
         apellido: req.body.apellido,
-        perfil: req.body.perfil,
-        foto: req.body.foto
 
     }
 
 
-    connection.query(sql, (error, results) => {
+    connection.query(sql, newUser, error => {
         if (error) throw error;
-        if (results.length > 0) {
-            res.json(results);
-        } else {
-            res.send('no results')
-        }
+       
+            res.send('Usuario Agregado')
+        });
 
-    })
 
 };
 

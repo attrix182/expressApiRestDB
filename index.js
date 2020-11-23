@@ -13,7 +13,7 @@ const user = require('./user.js');
 
 app.get('/', funciones.hi);
 
-app.post('/api/users', funciones.add);
+app.post('/api/users', user.add);
 
 //app.get('/api/users', funciones.list);
 app.get('/api/users', user.list);

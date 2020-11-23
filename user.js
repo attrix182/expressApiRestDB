@@ -43,7 +43,7 @@ user.listID = (req, res) => {
 
 };
 
-/*
+
 user.add = (req, res) => {
 
 
@@ -74,6 +74,6 @@ user.add = (req, res) => {
 
 };
 
-*/
+
 
 module.exports = user;

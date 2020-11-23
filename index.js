@@ -7,9 +7,6 @@ app.use(express.json());
 const user = require('./user.js');
 
 
-
-app.get('/', funciones.hi); //Test
-
 app.post('/api/users', user.add); //Add user
 
 app.get('/api/users', user.list); //Get Users

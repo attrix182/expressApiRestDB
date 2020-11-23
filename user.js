@@ -6,7 +6,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'expressdb'
+    database: 'expressdb' //Name DB
 });
 
 user.list = (req, res) => {

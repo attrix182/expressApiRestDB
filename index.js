@@ -4,29 +4,23 @@ const app = express();
 
 app.use(express.json());
 
-const funciones = require('./funciones.js');
-
-
 const user = require('./user.js');
 
 
 
-app.get('/', funciones.hi);
+app.get('/', funciones.hi); //Test
 
-app.post('/api/users', user.add);
+app.post('/api/users', user.add); //Add user
 
-//app.get('/api/users', funciones.list);
-app.get('/api/users', user.list);
+app.get('/api/users', user.list); //Get Users
 
-//app.get('/api/users/:id', funciones.listID);
-
-app.get('/api/users/:id', user.listID);
+app.get('/api/users/:id', user.listID);  //Get user where ID
 
 
-app.delete('/api/users/:id', user.deleteID);
+app.delete('/api/users/:id', user.deleteID); //Delete user for id
 
 
-app.put('/api/users/:id', user.modID);
+app.put('/api/users/:id', user.modID); //Moddify user for id
 
 
 const port = process.env.PORT || 3000;

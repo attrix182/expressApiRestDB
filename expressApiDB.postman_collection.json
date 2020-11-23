@@ -21,7 +21,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"name\" : \"Test\"\n}"
+					"raw": "{\n\"correo\" : \"test\", \"nombre\":\"test\", \"clave\":123, \"apellido\":\"test\"\n}"
 				},
 				"description": ""
 			},
@@ -30,7 +30,29 @@
 		{
 			"name": "api/users/id LIST ID",
 			"request": {
-				"url": "http://localhost:3000/api/users/1",
+				"url": {
+					"raw": "http://localhost:3000/api/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"2"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -45,6 +67,39 @@
 				"method": "GET",
 				"header": [],
 				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/ test",
+			"request": {
+				"url": "http://localhost:3000/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "api/users/ID DELETE",
+			"request": {
+				"url": "http://localhost:3000/api/users/18",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "18",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
 				"description": ""
 			},
 			"response": []

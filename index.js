@@ -23,7 +23,7 @@ app.get('/api/users', user.list);
 app.get('/api/users/:id', user.listID);
 
 
-app.delete('/api/users/:id', funciones.deleteID);
+app.delete('/api/users/:id', user.deleteID);
 
 
 

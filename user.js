@@ -68,5 +68,21 @@ user.add = (req, res) => {
 };
 
 
+user.deleteID = (req, res) => {
+
+
+    const {id }= req.params;
+    const sql = `DELETE FROM usuarios WHERE ID = ${id}`
+
+    connection.query(sql, (error, results) => {
+        if (error) throw error;
+     
+            res.send('Usuario eliminado')
+        
+
+    })
+
+};
+
 
 module.exports = user;

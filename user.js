@@ -43,7 +43,6 @@ user.listID = (req, res) => {
 
 };
 
-
 user.add = (req, res) => {
 
     const sql = 'INSERT INTO usuarios SET ?'

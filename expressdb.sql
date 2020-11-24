@@ -41,23 +41,6 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`ID`, `correo`, `clave`, `nombre`, `apellido`, `perfil`, `foto`) VALUES
-(1, 'pepito@gmail.com', '123', 'pepo', 'palta', 'encargado', 'palta.210155.jpg'),
-(2, 'a@b.com', '123', 'james', 'von', 'encargado', 'von.234947.png'),
-(3, 'a@b.com', '123', 'james', 'von', 'encargado', 'von.235025.png'),
-(4, 'null', '123', 'james', 'von', 'encargado', 'von.235041.png'),
-(5, 'NULL', '123', 'james', 'von', 'encargado', 'von.235049.png'),
-(6, 'abc@gmail.com', '123', 'james', 'von', 'encargado', 'von.00056.png'),
-(7, 'abc@gmail.com', '123', 'james', 'von', 'encargado', 'von.00130.png'),
-(8, 'abc@gmail.com', '123', 'james', 'von', 'encargado', 'von.00138.png'),
-(9, 'bbb@gmail.com', '123', 'james', 'von', 'encargado', 'von.00205.png'),
-(10, 'albert@gmail.com', '123', 'albert', 'test', 'encargado', 'test.01426.png'),
-(11, 'fercho@gmail.com', '123', 'fercho', 'perez', 'encargado', 'perez.03318.png'),
-(12, 'fercho@gmail.com', '123456', 'fercho', 'perez', 'encargado', 'perez.140034.png'),
-(13, 'AAAA@gmail.com', '123456', 'aga', 'perez', 'encargado', 'perez.140118.png'),
-(14, 'ava@gmail.com', '123456', 'vala', 'perez', 'encargado', 'perez.140150.png'),
-(15, 'admin@gmail.com', '123456', 'admin', 'perez', 'propietario', 'perez.154412.png'),
-(16, 'kaka@gmail.com', '123456', 'acca', 'perez', 'propietario', 'perez.161339.png');
 
 --
 -- Índices para tablas volcadas

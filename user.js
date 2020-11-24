@@ -60,7 +60,16 @@ user.add = (req, res) => {
     connection.query(sql, newUser, error => {
         if (error) throw error;
 
-        res.send('Usuario Agregado')
+        if (results.length > 0) {
+
+            newUsr =  capitalize(results[0].nombre);
+  
+              res.send("Welcome: " + newUsr);
+  
+          } else {
+
+              res.send('Can not add user to database');
+          }
     });
 
 
@@ -104,16 +113,16 @@ user.login = (req, res) => {
 
     const { correo, clave } = req.body;
     const sql = `SELECT * FROM usuarios WHERE correo='${correo}' and clave='${clave}'`
-    let newUsr;
+    let user;
 
     connection.query(sql, (error, results) => {
         if (error) throw error;
 
         if (results.length > 0) {
 
-          newUsr =  capitalize(results[0].nombre);
+          user =  capitalize(results[0].nombre);
 
-            res.send("Welcome: " + newUsr);
+            res.send("Welcome: " + user);
 
         } else {
             res.send('User invalid');

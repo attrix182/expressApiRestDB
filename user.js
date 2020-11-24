@@ -100,6 +100,37 @@ user.modID = (req, res) => {
 };
 
 
+user.login = (req, res) => {
+
+    const { correo, clave } = req.body;
+    const sql = `SELECT * FROM usuarios WHERE correo='${correo}' and clave='${clave}'`
+    let newUsr;
+
+    connection.query(sql, (error, results) => {
+        if (error) throw error;
+
+        if (results.length > 0) {
+
+          newUsr =  capitalize(results[0].nombre);
+
+            res.send("Welcome: " + newUsr);
+
+        } else {
+            res.send('User invalid');
+        }
+
+     
+
+
+    })
+
+};
+
+
+function capitalize(word) {
+    return word[0].toUpperCase() + word.slice(1);
+  }
+
 
 
 

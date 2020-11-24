@@ -67,7 +67,6 @@ user.add = (req, res) => {
 
 };
 
-
 user.deleteID = (req, res) => {
 
 
@@ -100,6 +99,8 @@ user.modID = (req, res) => {
     })
 
 };
+
+
 
 
 

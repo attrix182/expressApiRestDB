@@ -6,7 +6,7 @@ app.use(express.json());
 
 const user = require('./user.js');
 
-app.post('/api/users/login', user.login); //Add user
+app.post('/api/users/login', user.login); //Check user
 
 app.post('/api/users', user.add); //Add user
 
